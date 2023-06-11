@@ -12,8 +12,8 @@ class Duolingo(Base):
     options.add_experimental_option('excludeSwitches', ['enable-logging']) # 关闭log
     options.page_load_strategy = 'eager' # 修改页面加载策略
     d = webdriver.Chrome(options=options)  
-    d.implicitly_wait(15)
-    wait = WebDriverWait(d, 12)
+    d.implicitly_wait(10)   
+    wait = WebDriverWait(d, 8)
 
     # 已有账户btn
     already_have_an_account_locator = (By.XPATH, '//button[@data-test="have-account"]')
